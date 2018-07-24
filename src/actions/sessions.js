@@ -1,4 +1,4 @@
-import * as request from 'superagent'
+//import * as request from 'superagent'
 //import {baseUrl} from '../constants'
 // import {logout} from './users'
 // import {isExpired} from '../jwt'
@@ -40,8 +40,10 @@ const addSession = session => ({
 
 export const createSession = (data) => (dispatch) => {
  //   const jwt = localStorage.getItem(localStorageJwtKey)
-  const {topic, participents, date, time, EstimatedDuration,  } = data
-  dispatch(addSession(topic, participents, date, time, EstimatedDuration) )
+  //const {topic, participents, date, time, EstimatedDuration,  } = data
+  //dispatch(addSession(topic, participents, date, time, EstimatedDuration) )
+console.log('action', data)
+  dispatch(addSession(data) )
 //   request
 //     .post(`${baseUrl}/events`)
 //     .set('Authorization', `Bearer ${jwt}`)

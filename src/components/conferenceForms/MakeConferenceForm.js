@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 	handleSubmit = (e) => {
 		e.preventDefault()
 		this.props.onSubmit(this.state)
-		this.setState({title:'', message:'' })
 	}
 
 	handleChange = (event) => {
@@ -52,8 +51,8 @@ import { connect } from 'react-redux'
 				</div>
           
         <div>
-        <label htmlFor="participants">participants</label>
-                <select onChange = { this.handleChange }>
+        
+                <select name="participants" onChange = { this.handleChange }>
                     <option value = ""> participants </option>
                     <option value = "2"> 2 </option>
                     <option value = "3"> 3 </option>
