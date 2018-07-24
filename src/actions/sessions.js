@@ -5,6 +5,8 @@
 // import {localStorageJwtKey} from '../constants'
 
 export const ADD_SESSION = 'ADD_SESSION'
+export const GET_SESSION = 'GET_SESSION'
+
 
 
 
@@ -13,6 +15,10 @@ const addSession = session => ({
   payload: session
 })
 
+const getSession = session =>({
+    type: GET_SESSION,
+    payload: session
+})
 
 
 
@@ -37,12 +43,16 @@ const addSession = session => ({
 //     .catch(err => alert(err))
 
 // }
+export const fetchSession = (session)=> dispatch =>{
+    dispatch(getSession(session) )
+}
+
 
 export const createSession = (data) => (dispatch) => {
  //   const jwt = localStorage.getItem(localStorageJwtKey)
   //const {topic, participents, date, time, EstimatedDuration,  } = data
   //dispatch(addSession(topic, participents, date, time, EstimatedDuration) )
-console.log('action', data)
+
   dispatch(addSession(data) )
 //   request
 //     .post(`${baseUrl}/events`)

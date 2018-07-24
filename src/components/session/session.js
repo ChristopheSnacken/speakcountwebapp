@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 
-class Session extends Component {
+class session extends Component {
   render() {
     return (  
     <div className="Session">
-     Don't contact us
+     We dont have sessions yet
     </div> 
     )
   }
@@ -13,4 +13,4 @@ class Session extends Component {
 
 
 
-export default connect()(Session)
+export default connect()(session)
