@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-//import otherReducer from './otherReducer'
+import sessions from './sessions'
 
 export default combineReducers({
-  //otherReducer
+    sessions
 })

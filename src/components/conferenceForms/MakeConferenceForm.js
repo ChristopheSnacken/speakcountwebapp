@@ -24,9 +24,9 @@ import { connect } from 'react-redux'
       return(
 			<form onSubmit={this.handleSubmit}>
 				<div>
-					<label htmlFor="title">title</label>
-					<input type="title" name="title" id="title" value={
-						this.state.title || ''
+					<label htmlFor="topic">topic</label>
+					<input type="topic" name="topic" id="topic" value={
+						this.state.topic || ''
 					} onChange={ this.handleChange } />
 				</div>
 
@@ -50,7 +50,9 @@ import { connect } from 'react-redux'
 						this.state.EstimatedDuration || ''
 					} onChange={ this.handleChange } />
 				</div>
-            <div>
+          
+        <div>
+        <label htmlFor="participants">participants</label>
                 <select onChange = { this.handleChange }>
                     <option value = ""> participants </option>
                     <option value = "2"> 2 </option>
