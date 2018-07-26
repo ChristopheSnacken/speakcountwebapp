@@ -9,7 +9,9 @@ import About from './components/header/About'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Session from './components/session/Session'
 import StartPage from './components/session/StartPage'
+import SessionsList from './components/session/SessionsList'
 
+SessionsList
 
 
 class App extends Component {
@@ -22,7 +24,8 @@ class App extends Component {
           <Route exact path="/faq" component={Faq} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/createsession" component={MakeConferencePage} />
-          <Route exact path="/session" component={Session} />
+          <Route exact path="/sessions" component={SessionsList} />
+          <Route exact path="/sessions/:id" component={Session} />
           <Route exact path="/start" component={StartPage} />
           <Route exact path="/" render={ () => <Redirect to="/createsession" /> } />
         </div>

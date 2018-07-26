@@ -18,10 +18,9 @@ class MakeConferencePage extends Component {
     // }
    
    if(!data.participants){ console.log("How many people want to join?")}
-      // else if (!data.topic){ console.log("what is it about?")}
-      // else if (!data.time){ console.log("When does it start?")}
-      // else if (!data.EstimatedDuration){console.log("when does it stop?")}
-      // else if (!data.date){console.log("What day does it start")}
+      else if (!data.topic){ console.log("what is it about?")}
+      else if (!data.startTime){ console.log("When does it start?")}
+      else if (!data.stimatedTime){console.log("when does it stop?")}
      else{
         this.props.addSession(data)
         this.setState({redirect:true})
@@ -34,7 +33,7 @@ class MakeConferencePage extends Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to='/session' />
+      return <Redirect to='/sessions' />
     }
     return (  
     <div className="conference">
