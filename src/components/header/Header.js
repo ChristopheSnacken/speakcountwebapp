@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
-
+import { NavLink } from 'react-router-dom'
+import './Header.css'
 
 
 class Headers extends Component {
@@ -9,11 +9,23 @@ class Headers extends Component {
     return (
     
       
-    <div className="header">
-    <Link to={`/makesession`}>session </Link>
-        <Link to={`/about`}>about </Link>   
-        <Link to={`/FAQ`}>FAQ </Link>  
-        <Link to={`/contact`}>contact</Link>
+    <div className="headerdiv">
+    <NavLink 
+        to={`/makesession`}
+        activeStyle={{color: '#F1F1F1'}}
+        >session </NavLink>
+    <NavLink 
+        to={`/about`}
+        activeStyle={{color: '#F1F1F1'}}
+        >about </NavLink>   
+    <NavLink 
+        activeStyle={{color: '#F1F1F1'}}
+        to={`/FAQ`}
+        >FAQ </NavLink>  
+    <NavLink 
+        activeStyle={{color: '#F1F1F1'}}
+        to={`/contact`}
+        >contact</NavLink>
     </div>
    
     )

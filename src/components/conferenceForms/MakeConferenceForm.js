@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import './MakeConferenceForm.css'
 
 
   class MakeConferenceForm extends PureComponent {
@@ -20,34 +21,29 @@ import { connect } from 'react-redux'
 
 
     render() {
-      return(
+      return(<div className="MakeConferenceForm">
 			<form onSubmit={this.handleSubmit}>
 				<div>
-					<label htmlFor="topic">topic</label>
+					<label htmlFor="topic">topic:  </label>
 					<input type="topic" name="topic" id="topic" value={
 						this.state.topic || ''
 					} onChange={ this.handleChange } />
 				</div>
 
                 <div>
-					<label htmlFor="date">date</label>
-					<input type="date" name="date" id="date" value={
-						this.state.date || ''
+					<label htmlFor="startTime">date:   </label>  
+					<input type="datetime-local" name="startTime" id="startTime" value={
+						this.state.startTime || ''
 					} onChange={ this.handleChange } />
 				</div>
                 
-                <div>
-					<label htmlFor="time">time</label>
-					<input type="time" name="time" id="time" value={
-						this.state.time || ''
-					} onChange={ this.handleChange } />
-				</div>
+    
 
                  <div>
-					<label htmlFor="EstimatedDuration">EstimatedDuration</label>
-					<input type="time" name="EstimatedDuration" id="EstimatedDuration" value={
-						this.state.EstimatedDuration || ''
-					} onChange={ this.handleChange } />
+					<label htmlFor="stimatedTime">EstimatedDuration</label>
+					<input type="number" name="stimatedTime" id="stimatedTime" value={
+						this.state.stimatedTime || ''
+					} onChange={ this.handleChange } /> Minutes
 				</div>
           
         <div>
@@ -67,6 +63,7 @@ import { connect } from 'react-redux'
             </div>
 				<button type="submit">Proceed</button>
 			</form>
+      </div>
          )
        }
   }
