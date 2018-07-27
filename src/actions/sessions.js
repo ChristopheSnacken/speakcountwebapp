@@ -2,7 +2,7 @@ import * as request from 'superagent'
 import {baseUrl} from '../constants'
 
 export const ADD_SESSION = 'ADD_SESSION'
-export const GET_SESSION = 'GET_SESSION'
+export const UPDATE_SESSION = 'UPDATE_SESSION'
 export const STOP_SESSION = 'STOP_SESSION'
 export const ALL_SESSIONS = 'ALL_SESSIONS'
 
@@ -15,7 +15,7 @@ const addSession = session => ({
 })
 
 const getSession = session =>({
-    type: GET_SESSION,
+    type: UPDATE_SESSION,
     payload: session
 })
 

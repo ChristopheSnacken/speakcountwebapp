@@ -1,4 +1,4 @@
-import {ADD_SESSION, GET_SESSION, STOP_SESSION, ALL_SESSIONS} from '../actions/sessions'
+import {ADD_SESSION, STOP_SESSION, ALL_SESSIONS, UPDATE_SESSION} from '../actions/sessions'
 
 export default (state = {}, {type, payload}) => {
     switch (type) {
@@ -7,7 +7,11 @@ export default (state = {}, {type, payload}) => {
           ...state,
           ...payload
         }
-        case GET_SESSION:
+        // case GET_SESSION:
+        // return {
+        //   ...payload
+        // }
+        case UPDATE_SESSION:
         return {
           ...payload
         }
