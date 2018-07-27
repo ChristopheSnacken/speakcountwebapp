@@ -37,7 +37,7 @@ class MakeConferencePage extends Component {
     }
     return (  
     <div className="conference">
-     <img  src={mainLogo} alt="speakcount"/>
+    <div className='test'> <img  src={mainLogo} className='mainLogo' alt="speakcount"/></div>
      <div className="logos">Create a session</div>
       <MakeConferenceForm onSubmit={this.handleSubmit} />     
     </div>  

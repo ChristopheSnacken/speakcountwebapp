@@ -11,9 +11,13 @@ class Headers extends Component {
       
     <div className="headerdiv">
     <NavLink 
-        to={`/makesession`}
+        to={`/createsession`}
         activeStyle={{color: '#F1F1F1'}}
-        >session </NavLink>
+        >create session </NavLink>
+    <NavLink 
+        to={`/sessions`}
+        activeStyle={{color: '#F1F1F1'}}
+        >all sessions </NavLink>
     <NavLink 
         to={`/about`}
         activeStyle={{color: '#F1F1F1'}}

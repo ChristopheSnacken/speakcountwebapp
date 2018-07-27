@@ -1,5 +1,11 @@
-.MakeConferenceForm{
-    width:40%;
-    margin-left: auto;
-    margin-right:auto;
+
+
+.conference{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+.test {
+    justify-content: center;
 }

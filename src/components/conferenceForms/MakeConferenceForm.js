@@ -31,7 +31,7 @@ import './MakeConferenceForm.css'
 				</div>
 
                 <div>
-					<label htmlFor="startTime">date:   </label>  
+					<label>date:   </label>  
 					<input type="datetime-local" name="startTime" id="startTime" value={
 						this.state.startTime || ''
 					} onChange={ this.handleChange } />
