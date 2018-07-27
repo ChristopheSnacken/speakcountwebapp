@@ -16,7 +16,7 @@ class MakeConferencePage extends Component {
     // const newData={
     //   ...data,
     // }
-   
+
    if(!data.participants){ console.log("How many people want to join?")}
       else if (!data.topic){ console.log("what is it about?")}
       else if (!data.startTime){ console.log("When does it start?")}
@@ -35,12 +35,12 @@ class MakeConferencePage extends Component {
     if (this.state.redirect) {
       return <Redirect to='/sessions' />
     }
-    return (  
+    return (
     <div className="conference">
      <img  src={mainLogo} alt="speakcount"/>
-     <div className="logos">Create a session</div>
-      <MakeConferenceForm onSubmit={this.handleSubmit} />     
-    </div>  
+     
+      <MakeConferenceForm onSubmit={this.handleSubmit} />
+    </div>
     )
   }
 }
@@ -54,7 +54,7 @@ const mapStateToProps = function (state) {
 
 const mapDispatchToProps = dispatch => {
     return {
-    
+
       addSession: (session) => {
         dispatch(createSession(session))
       },

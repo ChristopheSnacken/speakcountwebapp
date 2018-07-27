@@ -1,75 +1,108 @@
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React, {PureComponent} from 'react'
+import {connect} from 'react-redux'
 import './MakeConferenceForm.css'
 
+class MakeConferenceForm extends PureComponent {
+  state = {}
 
-  class MakeConferenceForm extends PureComponent {
-    state = {}
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.onSubmit(this.state)
+  }
 
-	handleSubmit = (e) => {
-		e.preventDefault()
-		this.props.onSubmit(this.state)
-	}
-
-	handleChange = (event) => {
+  handleChange = (event) => {
     const {name, value} = event.target
 
-    this.setState({
-      [name]: value
-    })
+    this.setState({[name]: value})
   }
 
+  render() {
+    return (<div className="MakeConferenceForm">
 
-    render() {
-      return(<div className="MakeConferenceForm">
-			<form onSubmit={this.handleSubmit}>
-				<div>
-					<label htmlFor="topic">topic:  </label>
-					<input type="topic" name="topic" id="topic" value={
-						this.state.topic || ''
-					} onChange={ this.handleChange } />
-				</div>
+      <form onSubmit={this.handleSubmit} className='form1'>
 
-                <div>
-					<label htmlFor="startTime">date:   </label>  
-					<input type="datetime-local" name="startTime" id="startTime" value={
-						this.state.startTime || ''
-					} onChange={ this.handleChange } />
-				</div>
-                
-    
+        <table className="table">
+          <tr>
+            <td className="logos">Create a session
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label htmlFor="topic">Session name:
+              </label>
+            </td>
+            <td><input className="inputForm" type="topic" name="topic" id="topic" value={this.state.topic || ''
+} onChange={this.handleChange}/></td>
 
-                 <div>
-					<label htmlFor="stimatedTime">EstimatedDuration</label>
-					<input type="number" name="stimatedTime" id="stimatedTime" value={
-						this.state.stimatedTime || ''
-					} onChange={ this.handleChange } /> Minutes
-				</div>
-          
-        <div>
-        
-                <select name="participants" onChange = { this.handleChange }>
-                    <option value = ""> participants </option>
-                    <option value = "2"> 2 </option>
-                    <option value = "3"> 3 </option>
-                    <option value = "4"> 4 </option>
-                    <option value = "5"> 5 </option>
-                    <option value = "6"> 6 </option>
-                    <option value = "7"> 7 </option>
-                    <option value = "8"> 8 </option>
-                    <option value = "9"> 9 </option>
-                    <option value = "10"> 10 </option>
-                </select>
-            </div>
-				<button type="submit">Proceed</button>
-			</form>
-      </div>
-         )
-       }
+          </tr>
+          <tr>
+            <td>
+              <label htmlFor="startTime">Date:
+              </label>
+            </td>
+            <td><input className="inputForm" type="datetime-local" name="startTime" id="startTime" value={this.state.startTime || ''
+} onChange={this.handleChange}/>
+
+</td>
+
+          </tr>
+          <tr>
+            <td>
+              <label htmlFor="stimatedTime">Estimated time:</label>
+            </td>
+            <td><input className="inputForm" type="number" name="stimatedTime" id="stimatedTime" value={this.state.stimatedTime || ''
+} onChange={this.handleChange}/>
+            </td>
+
+          </tr>
+          <tr>
+            <td>
+              <label htmlFor="stimatedTime">Participants:</label>
+            </td>
+            <td>
+              <select className="inputForm" name="participants" onChange={this.handleChange}>
+                <option value="">
+
+                </option>
+                <option value="2">
+                  2
+                </option>
+                <option value="3">
+                  3
+                </option>
+                <option value="4">
+                  4
+                </option>
+                <option value="5">
+                  5
+                </option>
+                <option value="6">
+                  6
+                </option>
+                <option value="7">
+                  7
+                </option>
+                <option value="8">
+                  8
+                </option>
+                <option value="9">
+                  9
+                </option>
+                <option value="10">
+                  10
+                </option>
+              </select>
+            </td>
+
+          </tr>
+        </table>
+
+
+        <button type="submit" className="submit">Save</button>
+
+      </form>
+    </div>)
   }
+}
 
-
-
-
-
-  export default connect( ) (MakeConferenceForm)
+export default connect()(MakeConferenceForm)
