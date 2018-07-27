@@ -2,10 +2,14 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { getAllSessions }  from '../../actions/sessions'
 import SessionItem from './SessionItem'
+import mainLogo from '../../images/logo-website.png';
+import './SessionsList.css'
+import { Link } from 'react-router-dom'
+
 
 
   class SessionsList extends PureComponent {
-  
+
     componentDidMount(){
       this.props.getAllSessions()
     }
@@ -13,15 +17,21 @@ import SessionItem from './SessionItem'
 
     render() {
       return(
-         <div style={{margin:80}}>
+
+         <div  className="mainList">
+           <div className="mailnLogoList"><img  className="mainLogo" src={mainLogo} alt="speakcount"/></div>
+
+
            {this.props.sessions &&
-           <div>
-               
+           <div >
+             <div className="logos" id="logos"> Scheduled Sessions</div>
+
              {this.props.sessions.map(session=> <SessionItem {...session} />)}
 
-          
+
             </div>
            }
+           <Link to={"/createSession"}><button type="submit" className="submit2">Back</button></Link>
          </div>
          )
        }
