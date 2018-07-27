@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Amiko');
+
 .App {
   background-color: #212121;
   min-height:1024px;
   color: #F1F1F1;
-  font:Amiko;
+  font-family: 'Amiko', sans-serif;
 }
 
 .App-logo {
@@ -26,9 +28,4 @@
   width:90;
   margin-right: auto;
   margin-left: auto;
-}
-
-.mainLogo{
-    max-width:400px;
-    
 }
