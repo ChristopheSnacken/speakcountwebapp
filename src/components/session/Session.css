@@ -1,0 +1,23 @@
+.Session {
+  font-size: 200px;
+  color: #FFD02B;
+  margin-bottom: 30px;
+
+}
+.code {
+  display : flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.participants {
+  margin-bottom: 50px;
+}
+.code1 {
+  display: flex
+}
+.codeTitle {
+
+  margin: auto;
+  margin-left: 30px;
+}
