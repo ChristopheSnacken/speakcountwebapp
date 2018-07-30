@@ -3,7 +3,7 @@ import {baseUrl} from '../constants'
 
 export const ADD_SESSION = 'ADD_SESSION'
 export const UPDATE_SESSION = 'UPDATE_SESSION'
-export const STOP_SESSION = 'STOP_SESSION'
+export const SET_SESSION = 'SET_SESSION'
 export const ALL_SESSIONS = 'ALL_SESSIONS'
 
 
@@ -25,14 +25,15 @@ const allSessions = session =>({
 })
 
 const stopSession = (sessionId) => ({
-    type: STOP_SESSION,
+    type: SET_SESSION,
     payload: sessionId
 })
 
 
-export const earlyStopSession= (stop) => dispatch =>{
+export const startAndStopMessage= (id,message) => dispatch =>{
     request
-    .put(`${baseUrl}/sessions/${stop}`)
+    .put(`${baseUrl}/sessions/${id}`)
+    .send({status: message})
     .then(result => dispatch(stopSession(result.body) ))
     .catch(err => console.error(err))
 }

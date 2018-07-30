@@ -1,4 +1,4 @@
-import {ADD_SESSION, STOP_SESSION, ALL_SESSIONS, UPDATE_SESSION} from '../actions/sessions'
+import {ADD_SESSION, SET_SESSION, ALL_SESSIONS, UPDATE_SESSION} from '../actions/sessions'
 
 export default (state = {}, {type, payload}) => {
     switch (type) {
@@ -16,10 +16,9 @@ export default (state = {}, {type, payload}) => {
           ...payload
         }
         
-        case STOP_SESSION:
+        case SET_SESSION:
         return{
-            ...state,
-            payload
+            ...payload
         }
         case ALL_SESSIONS:
         return payload.reduce((sessions, session) => {

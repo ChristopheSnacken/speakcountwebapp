@@ -11,7 +11,7 @@ import Session from './components/session/Session'
 import StartPage from './components/session/StartPage'
 import SessionsList from './components/session/SessionsList'
 
-SessionsList
+
 
 
 class App extends Component {
@@ -27,7 +27,7 @@ class App extends Component {
           <Route exact path="/sessions" component={SessionsList} />
           <Route exact path="/sessions/:id" component={Session} />
           <Route exact path="/start" component={StartPage} />
-          <Route exact path="/" render={ () => <Redirect to="/createsession" /> } />
+          <Route exact path="/" render={ () => <Redirect to="/start" /> } />
         </div>
       </div>
     );
