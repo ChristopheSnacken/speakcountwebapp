@@ -1,0 +1,12 @@
+.FaqMain {
+  display: flex;
+  justify-content: center;
+}
+.Faq {
+  width:50%;
+  margin-top: 50px;
+
+}
+.mainLogo {
+  max-width: 350px;
+}
