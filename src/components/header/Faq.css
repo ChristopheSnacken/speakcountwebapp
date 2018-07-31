@@ -1,10 +1,12 @@
 .FaqMain {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 .Faq {
   width:50%;
   margin-top: 50px;
+
 
 }
 .mainLogo {
