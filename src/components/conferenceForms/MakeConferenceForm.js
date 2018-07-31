@@ -57,10 +57,10 @@ class MakeConferenceForm extends PureComponent {
           </tr>
           <tr>
             <td>
-              <label htmlFor="Participants">Participants:</label>
+              <label htmlFor="numberOfParticipants">Participants:</label>
             </td>
             <td>
-              <select className="inputForm" name="Participants" onChange={this.handleChange}>
+              <select className="inputForm" name="numberOfParticipants" onChange={this.handleChange}>
                 <option value="">
 
                 </option>
