@@ -74,3 +74,8 @@
   margin-top: 30px;
 
 }
+.archived {
+position: relative;
+  top: 10px;
+  width: 30px;
+}

@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
       return(
 
          <div  className="mainList">
-           <div className="mailnLogoList"><img  className="mainLogo" src={mainLogo} alt="speakcount"/></div>
+           <div className="mailnLogoList"><Link to={"/start"}><img  className="mainLogo" src={mainLogo} alt="speakcount"/></Link></div>
 
 
            {this.props.sessions &&

@@ -14,11 +14,11 @@ class SessionJoining extends Component {
   }
 
   render() {
-    
+
     return (<div className="code" >
 
       {
-        this.props.session && <div className= "code1"> <img  className="mainLogo" src={phone} alt="speakcount"/><div className= "codeTitle"><div>Enter this code in the mobile app to join <b>{this.props.session.topic} discussion </b><div className="Session">
+        this.props.session && <div className= "code1"> <Link to={"/start"}><img  className="mainLogo" src={phone} alt="speakcount"/></Link><div className= "codeTitle"><div>Enter this code in the mobile app to join <b>{this.props.session.topic} discussion </b><div className="Session">
              <b>{this.props.session.id}</b>
           </div></div></div>{console.log("status ", this.props.session.status)}</div>
       }
@@ -31,7 +31,7 @@ class SessionJoining extends Component {
        <button className="submit" onClick={this.startClick}>
         Start session
       </button>
-   
+
     </div>)
   }
 }
@@ -69,7 +69,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(SessionJoining)
 //   }
 
 //   render() {
-    
+
 //     return (<div className="code" >
 
 //       {

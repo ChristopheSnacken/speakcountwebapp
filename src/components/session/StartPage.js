@@ -14,7 +14,7 @@ class StartPage extends Component {
   render() {
     return (
     <div className="Startpage">
-       <img  className="mainLogo" src={mainLogo} alt="speakcount"/>
+       <Link to={"/start"}><img  className="mainLogo" src={mainLogo} alt="speakcount"/></Link>
       <div className="buttons">
           <Link to={"/createSession"}><button type="submit" className="submit">Create a session</button></Link>
           <Link to={"/sessions"}><button type="submit" className="submit2">Scheduled sessions</button></Link>

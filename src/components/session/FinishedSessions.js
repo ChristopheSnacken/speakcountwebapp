@@ -5,6 +5,7 @@ import SessionItem from './SessionItem'
 import mainLogo from '../../images/logo-website.png';
 import './SessionsList.css'
 import { Link } from 'react-router-dom'
+import archived from '../../images/icon-archive.png';
 
 
 
@@ -19,12 +20,12 @@ import { Link } from 'react-router-dom'
       return(
 
          <div  className="mainList">
-           <div className="mailnLogoList"><img  className="mainLogo" src={mainLogo} alt="speakcount"/></div>
+           <div className="mailnLogoList"><Link to={"/start"}><img  className="mainLogo" src={mainLogo} alt="speakcount"/></Link></div>
 
 
            {this.props.sessions &&
-           <div className="mainList1">
-             <div className="logos" id="logos">Archived sessions</div>
+           <div >
+             <div className="logos1" id="logos"><img className='archived' src={archived} alt="archived"/> Archived sessions</div>
 
              {this.props.sessions.map(session=> <SessionItem  {...session} />)}
 
