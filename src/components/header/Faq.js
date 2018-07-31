@@ -51,8 +51,8 @@ The two men shivered with expectancy. Their waiting had not been in vain.
 "Yes."<br/>
 Both of the men had been trained for this moment, their lives had been a preparation for it, they had been selected at birth as those who would witness the answer, but even so they found themselves gasping and squirming like excited children.
 "And you're ready to give it to us?" urged Loonsuawl.<br/><br/>
-"I am."
-"Now?"
+"I am."<br/>
+"Now?"<br/>
 "Now," said Deep Thought.<br/><br/>
 They both licked their dry lips.<br/><br/>
 "Though I don't think," added Deep Thought. "that you're going to like it."<br/><br/>
