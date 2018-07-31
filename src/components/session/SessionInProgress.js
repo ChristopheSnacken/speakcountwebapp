@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './Session.css'
-import phone from '../../images/phone.png'
 import {startAndStopMessage} from '../../actions/sessions'
+import Puzzle from './Puzzle'
 
 class SessionInProgress extends Component {
   startClick = () => {
@@ -17,7 +17,12 @@ class SessionInProgress extends Component {
     return (<div className="code" >
 
       {
-        this.props.session && <div className= "code1"> {this.props.session.topic} discussion </div>
+        this.props.session && <div className= "code1"> {this.props.session.topic} discussion 
+        
+        {this.props.session.pieces_to_complete}
+        <Puzzle />
+        
+        </div>
       }
      
 

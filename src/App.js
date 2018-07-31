@@ -10,7 +10,8 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import Session from './components/session/Session'
 import StartPage from './components/session/StartPage'
 import SessionsList from './components/session/SessionsList'
-
+import StartedSessionList from './components/session/StartedSessionList'
+import FinishedSessions from './components/session/FinishedSessions'
 
 
 
@@ -27,6 +28,8 @@ class App extends Component {
           <Route exact path="/sessions" component={SessionsList} />
           <Route exact path="/sessions/:id" component={Session} />
           <Route exact path="/start" component={StartPage} />
+          <Route exact path="/started" component={StartedSessionList} />
+          <Route exact path="/reports" component={FinishedSessions} />
           <Route exact path="/" render={ () => <Redirect to="/start" /> } />
         </div>
       </div>

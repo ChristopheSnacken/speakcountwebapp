@@ -1,4 +1,4 @@
-import {ADD_SESSION, SET_SESSION, ALL_SESSIONS, UPDATE_SESSION} from '../actions/sessions'
+import {ADD_SESSION, SET_SESSION, ALL_SESSIONS, UPDATE_SESSION, STARTED_SESSIONS, FINISHED_SESSIONS} from '../actions/sessions'
 
 export default (state = {}, {type, payload}) => {
     switch (type) {
@@ -21,11 +21,11 @@ export default (state = {}, {type, payload}) => {
             ...payload
         }
         case ALL_SESSIONS:
-        return payload.reduce((sessions, session) => {
-          sessions[session.id] = session
-          return sessions
-        }, {})
-     
+        return {...payload.filter((session)=>session.status==='created')}
+        case STARTED_SESSIONS:
+        return {...payload.filter((session)=>session.status==='started')}
+        case FINISHED_SESSIONS:
+        return {...payload.filter((session)=>session.status==='finished')}
       default:
         return state
     }

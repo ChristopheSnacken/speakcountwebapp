@@ -17,15 +17,11 @@ class MakeConferencePage extends Component {
     //   ...data,
     // }
 
-   if(!data.participants){ console.log("How many people want to join?")}
-      else if (!data.topic){ console.log("what is it about?")}
-      else if (!data.startTime){ console.log("When does it start?")}
-      else if (!data.stimatedTime){console.log("when does it stop?")}
-     else{
+
         this.props.addSession(data)
         this.setState({redirect:true})
         console.log(this.state.redirect)
-    }
+
 
   }
 

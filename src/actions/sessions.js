@@ -5,7 +5,19 @@ export const ADD_SESSION = 'ADD_SESSION'
 export const UPDATE_SESSION = 'UPDATE_SESSION'
 export const SET_SESSION = 'SET_SESSION'
 export const ALL_SESSIONS = 'ALL_SESSIONS'
+export const STARTED_SESSIONS = 'STARTED_SESSIONS'
+export const FINISHED_SESSIONS = 'FINISHED_SESSIONS'
 
+
+const startedSessions = session =>({
+    type: STARTED_SESSIONS,
+    payload: session
+})
+
+const finishedSessions = session =>({
+    type: FINISHED_SESSIONS,
+    payload: session
+})
 
 
 
@@ -52,9 +64,24 @@ export const getAllSessions=()=>dispatch=>{
     .catch(err => console.error(err))
 }
 
+export const getFinishedSessions=()=>dispatch=>{
+    request
+    .get(`${baseUrl}/sessions`)
+    .then(result => dispatch(finishedSessions(result.body) ))
+    .catch(err => console.error(err))
+}
+
+export const getStartedSessions=()=>dispatch=>{
+    request
+    .get(`${baseUrl}/sessions`)
+    .then(result => dispatch(startedSessions(result.body) ))
+    .catch(err => console.error(err))
+}
+
 
 export const createSession = (data) => (dispatch) => {
- 
+
+    console.log(data)
   request
     .post(`${baseUrl}/sessions`)
     .send(data)
