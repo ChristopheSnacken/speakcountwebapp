@@ -17,6 +17,12 @@ class Headers extends Component {
         activeStyle={{color: '#F1F1F1'}}
         to={`/FAQ`}
         >More information </NavLink>
+    
+    <NavLink
+        className="links"
+        activeStyle={{color: '#F1F1F1'}}
+        to={`/reports`}
+        >Archived sessions </NavLink>
 
     </div>
 

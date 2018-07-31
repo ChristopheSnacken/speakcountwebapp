@@ -13,6 +13,13 @@
   align-items: center;
 
 }
+.mainList1 {
+
+  background-color: #585f6e;
+  margin-top: 40px;
+  /* padding-top: -30px; */
+
+}
 .Topic {
   color:#ffd02b;
 }

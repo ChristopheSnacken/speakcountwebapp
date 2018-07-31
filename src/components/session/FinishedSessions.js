@@ -23,15 +23,15 @@ import { Link } from 'react-router-dom'
 
 
            {this.props.sessions &&
-           <div >
-             <div className="logos" id="logos"> Finished Sessions</div>
+           <div className="mainList1">
+             <div className="logos" id="logos">Archived sessions</div>
 
-             {this.props.sessions.map(session=> <SessionItem {...session} />)}
+             {this.props.sessions.map(session=> <SessionItem  {...session} />)}
 
 
             </div>
            }
-           <Link to={"/createSession"}><button type="submit" className="submit2">Back</button></Link>
+           <Link to={"/start"}><button type="submit" className="submit2">Back</button></Link>
          </div>
          )
        }
