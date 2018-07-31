@@ -16,15 +16,22 @@ class MakeConferencePage extends Component {
     // const newData={
     //   ...data,
     // }
-
+    
    if(!data.numberOfParticipants){ console.log("How many people want to join?")}
       else if (!data.topic){ console.log("what is it about?")}
       else if (!data.startTime){ console.log("When does it start?")}
       else if (!data.stimatedTime){console.log("when does it stop?")}
      else{
-        this.props.addSession(data)
+       const topic = data.topic
+       const stimatedTime = data.stimatedTime*60
+       const numberOfParticipants = Number(data.numberOfParticipants)
+       const startTime = data.startTime
+       const newData ={
+        topic, stimatedTime, numberOfParticipants, startTime
+       }
+     
+        this.props.addSession(newData)
         this.setState({redirect:true})
-        console.log(this.state.redirect)
     }
 
   }

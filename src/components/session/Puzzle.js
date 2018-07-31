@@ -1,19 +1,21 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
+import {newPuzzle} from '../../actions/puzzle'
 
 //import Pieces from './Pieces'
 
 class Puzzle extends Component {
     componentDidMount(){
-       const PuzzlePieces=new Array(this.props.session.totalPieces).fill("white")
-       console.log("pieces", PuzzlePieces)
+       const PuzzlePieces=this.props.session.pieces_to_complete
+       console.log(PuzzlePieces)
+       this.props.newPuzzle(PuzzlePieces)
     }
   render() {
-    console.log(this)
     return (  
 
     <div className="Puzzle">
-    {this.PuzzlePieces&&<div>{this.PuzzlePieces.map((color)=>color)}
+
+    {this.props.puzzle&&<div>{this.props.puzzle.map((color)=><div>{color}</div>)}
      </div>
      }
     </div> 
@@ -23,8 +25,17 @@ class Puzzle extends Component {
 
 const mapStateToProps = function (state) {
     return {
-     session: state.sessions,
+     session: state.sessions[0],
+     puzzle: state.puzzle
     }
   }
 
-export default connect(mapStateToProps)(Puzzle)
+  const mapDispatchToProps = dispatch => {
+    return {
+      newPuzzle: (x) => {
+        dispatch(newPuzzle(x));
+      }
+    };
+  };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Puzzle)

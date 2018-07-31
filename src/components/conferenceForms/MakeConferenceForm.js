@@ -22,7 +22,7 @@ class MakeConferenceForm extends PureComponent {
 
       <form onSubmit={this.handleSubmit} className='form1'>
 
-        <table className="table">
+        <tbody className="table">
           <tr>
             <td className="logos">Create a session
             </td>
@@ -94,7 +94,7 @@ class MakeConferenceForm extends PureComponent {
             </td>
 
           </tr>
-        </table>
+        </tbody>
 
 
         <button type="submit" className="submit" >Save</button>

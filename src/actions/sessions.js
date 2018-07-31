@@ -80,11 +80,12 @@ export const getStartedSessions=()=>dispatch=>{
 
 
 export const createSession = (data) => (dispatch) => {
-
+    const {topic ,startTime, stimatedTime, numberOfParticipants}= data
     console.log(data)
+   
   request
     .post(`${baseUrl}/sessions`)
-    .send(data)
+    .send({topic ,startTime, stimatedTime, numberOfParticipants})
     .then(result => dispatch(addSession(...result.body) ))
     .catch(err => console.error(err))
 }

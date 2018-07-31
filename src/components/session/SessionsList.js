@@ -39,7 +39,7 @@ import { Link } from 'react-router-dom'
 
   const mapStateToProps = state => ({
     sessions: state.sessions === null ?
-    null : Object.values(state.sessions).sort((a, b) => b.id - a.id)
+    null : Object.values(state.sessions).sort((a, b) => a.startTime - b.startTime)
   })
 
   const mapDispatchToProps = dispatch => {
