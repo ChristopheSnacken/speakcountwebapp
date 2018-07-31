@@ -31,7 +31,7 @@ import { Link } from 'react-router-dom'
 
             </div>
            }
-           <Link to={"/createSession"}><button type="submit" className="submit2">Back</button></Link>
+           <Link to={"/start"}><button type="submit" className="submit2">Back</button></Link>
          </div>
          )
        }

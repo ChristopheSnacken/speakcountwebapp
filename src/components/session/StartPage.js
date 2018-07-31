@@ -8,21 +8,22 @@ import phones from'../../images/phone-app.png';
 
 class StartPage extends Component {
   componentDidMount(){
-  
+
   }
 
   render() {
-    return (  
+    return (
     <div className="Startpage">
        <img  className="mainLogo" src={mainLogo} alt="speakcount"/>
       <div className="buttons">
           <Link to={"/createSession"}><button type="submit" className="submit">Create a session</button></Link>
           <Link to={"/sessions"}><button type="submit" className="submit2">Scheduled sessions</button></Link>
       </div>
-       <div className="introText">Participants can join the SpeakCount session on their phone with the unique session code</div>
+       <div className="introText">Participants can join the SpeakCount session on their <br/>phone with the unique session code</div>
+
 
        <img  className="phones" src={phones} alt="phones"/>
-    </div> 
+    </div>
     )
   }
 }
@@ -35,7 +36,7 @@ class StartPage extends Component {
 
 // const mapDispatchToProps = dispatch => {
 //     return {
-        
+
 //     };
   // };
 

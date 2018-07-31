@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react'
 import {connect} from 'react-redux'
 import './MakeConferenceForm.css'
+import { Link } from 'react-router-dom'
 
 class MakeConferenceForm extends PureComponent {
   state = {}
@@ -27,6 +28,10 @@ class MakeConferenceForm extends PureComponent {
             </td>
           </tr>
           <tr>
+            <td className="sublogos">All fields are required
+            </td>
+          </tr>
+          <tr>
             <td>
               <label htmlFor="topic">Session name:
               </label>
@@ -37,7 +42,7 @@ class MakeConferenceForm extends PureComponent {
           </tr>
           <tr>
             <td>
-              <label htmlFor="startTime">Date:
+              <label htmlFor="startTime">Date & Time:
               </label>
             </td>
             <td><input className="inputForm" type="datetime-local" name="startTime" id="startTime" value={this.state.startTime || ''
@@ -48,10 +53,10 @@ class MakeConferenceForm extends PureComponent {
           </tr>
           <tr>
             <td>
-              <label htmlFor="stimatedTime">Estimated time:</label>
+              <label htmlFor="stimatedTime">Estimated duration:</label>
             </td>
-            <td><input className="inputForm" type="number" name="stimatedTime" id="stimatedTime" value={this.state.stimatedTime || ''
-} onChange={this.handleChange}/>
+            <td><input className="no-spinners" type="number" name="stimatedTime" id="stimatedTime" value={this.state.stimatedTime || ''
+} onChange={this.handleChange}/> minutes
             </td>
 
           </tr>
@@ -63,12 +68,6 @@ class MakeConferenceForm extends PureComponent {
               <select className="inputForm" name="participants" onChange={this.handleChange}>
                 <option value="">
 
-                </option>
-                <option value="2">
-                  2
-                </option>
-                <option value="3">
-                  3
                 </option>
                 <option value="4">
                   4
@@ -98,7 +97,8 @@ class MakeConferenceForm extends PureComponent {
         </table>
 
 
-        <button type="submit" className="submit">Save</button>
+        <button type="submit" className="submit" >Save</button>
+        <Link to={"/start"}><button type="submit" className="submit2">Back</button></Link>
 
       </form>
     </div>)

@@ -14,11 +14,11 @@ class Session extends Component {
     return (<div className="code" >
     {!this.props.session && <div>loading</div>}
     {/* check if it's defined and then what the status is */}
-      { this.props.session && 
-      <div> {this.props.session.status==='created' && <div> <SessionJoining />  </div> }  
+      { this.props.session &&
+      <div> {this.props.session.status==='created' && <div> <SessionJoining />  </div> }
       <div> {this.props.session.status==='started' && <div> <SessionInProgress />  </div> }</div>
       <div> {this.props.session.status==='finished' && <div> this session is finished  </div> }</div>
-      </div> 
+      </div>
     }
 
 

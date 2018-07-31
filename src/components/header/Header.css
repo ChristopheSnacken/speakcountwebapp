@@ -2,4 +2,16 @@
     width:90%;
     text-align:right;
     height:50px;
+    margin-top: 20px;
+}
+.links {
+  color: #F1F1F1;
+  text-decoration: none;
+  font-weight: bold;
+
+}
+.links:visited {
+  color: #F1F1F1;
+  text-decoration: none;
+  font-weight: bold;
 }

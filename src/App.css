@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Amiko');
 
+body {
+  background-color: #212121;
+}
 .App {
   background-color: #212121;
   min-height:1024px;
@@ -35,4 +38,8 @@
 }
 .logos {
   color: #ffd02b;
+}
+.sublogos {
+  color: #F1F1F1;
+  font-size: 10px;
 }

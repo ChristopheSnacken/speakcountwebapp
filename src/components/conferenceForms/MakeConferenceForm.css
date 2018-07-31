@@ -21,7 +21,7 @@
   border-width: 1px;
   margin: 10px;
   color: #f1f1f1;
-  min-width: 300px;
+  /* min-width: 300px; */
 }
 .form1 {
   display: flex;
@@ -45,10 +45,43 @@
   border: 0;
 
 }
+
+.submit:disabled {
+  background-color: #212121;
+  color: #f1f1f1;
+  height: 50px;
+  width: 200px;
+  border-radius: 30px;
+  font-size: 20px;
+  border-color: #3A7DC7;
+  /* box-shadow: none; */
+  border: 0;
+
+}
 tr {
   margin: 40px;
 }
 .table {
   margin: 40px;
   min-width: 500px;
+}
+
+/* hide up/down arrows ("spinners") on input fields marked type="number" */
+.no-spinners {
+  -moz-appearance:textfield;
+  background-color: #212121;
+  border-bottom-color: #f1f1f1;
+  border-right: #212121;
+  border-left: #212121;
+  border-top: #212121;
+  border-width: 1px;
+  margin: 10px;
+  color: #f1f1f1;
+  max-width: 70px;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

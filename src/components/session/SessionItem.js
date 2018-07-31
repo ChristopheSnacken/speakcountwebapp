@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import dateFormat from 'dateformat'
 
   class SessionItem extends PureComponent {
     componentDidMount(){
@@ -17,14 +18,14 @@ import { Link } from 'react-router-dom'
 
 
          <h3>{this.props.description}</h3>
-         <div className="Date"> {date.getDate()}-{date.getMonth()}-{date.getFullYear()}</div>
+         <div className="Date"> {dateFormat(date, "dddd d mmmm")}</div>
          <div className="Topic">{this.props.topic}</div>
-         <div className="Time"> {date.getHours()}:{date.getMinutes()}</div>
+         <div className="Time"> Starts at:  {dateFormat(date, "UTC:HH:MM")}</div>
        </div>
        <div className="open">
 
          <Link to={"/sessions/"+ this.props.id}><button type="submit" className="submit1">Open</button></Link>
-         
+
        </div>
 
 
