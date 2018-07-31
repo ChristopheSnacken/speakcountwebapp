@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import  MakeConferenceForm  from './MakeConferenceForm'
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 import mainLogo from'../../images/logo-website.png';
+import { Link } from 'react-router-dom';
 
 
 
@@ -37,7 +38,7 @@ class MakeConferencePage extends Component {
     }
     return (
     <div className="conference">
-     <img  className="mainLogo" src={mainLogo} alt="speakcount"/>
+     <Link to={"/start"}><img  className="mainLogo" src={mainLogo} alt="speakcount"/></Link>
 
       <MakeConferenceForm onSubmit={this.handleSubmit} />
     </div>
