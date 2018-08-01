@@ -7,8 +7,7 @@ class Piece extends Component {
 render() {
     return (
     <div className="Piece">
-       {this.props.id}
-       {this.props.color}
+          {this.props.id}  
     </div>
     )
   }

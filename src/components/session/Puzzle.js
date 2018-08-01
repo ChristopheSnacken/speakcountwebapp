@@ -15,7 +15,7 @@ class Puzzle extends Component {
 
     <div className="Puzzle">
 
-    {this.props.puzzle&&<div>{this.props.puzzle.map((row)=><div className="row">{row.map((color)=><Piece {...color} />)} </div>)}
+    {this.props.puzzle&&<div>{this.props.puzzle.map((row,w)=><div className="row">{row.map((color, i)=><Piece {...color} w={w} i={i}/>)} </div>)}
      </div>
      }
     </div> 

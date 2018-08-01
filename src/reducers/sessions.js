@@ -5,7 +5,7 @@ export default (state = {}, {type, payload}) => {
       case ADD_SESSION:
         return {
           ...state,
-          ...payload
+          payload
         }
         // case GET_SESSION:
         // return {
