@@ -11,10 +11,10 @@ export const makePuzzle = (puzzle) => {
     }
   }
 
-export const  getPiece = (piece) =>{
+export const  getPiece = (puzzle) =>{
    return{
         type: GET_PIECE,
-        payload: piece
+        payload: puzzle
     }
 }
 
@@ -37,7 +37,7 @@ const numberChecker = (fullNumber, divider)=>{
   const arrayMaker = (number)=>{
     let Narray=[]
     let i = 0
-    for (i=0; i<=number; i++){
+    for (i=0; i<number; i++){
       Narray.push(i)
     }
     return Narray
@@ -45,7 +45,7 @@ const numberChecker = (fullNumber, divider)=>{
   
   function shuffle(a) {
     let j, x, i;
-    for (i = a.length ; i > 0; i--) {
+    for (i = a.length-1 ; i >= 0; i--) {
         j = Math.floor(Math.random() * (i + 1));
         x = a[i];
         a[i] = a[j];
@@ -68,13 +68,19 @@ const numberChecker = (fullNumber, divider)=>{
         ...arr[i][j],
         id:shuffleArray.shift()
       }
-      console.log(arr[i][j]) 
     }
 }
   dispatch(makePuzzle( arr) )
-
- //return matrix(width,length);
 }
 
+
+///////////////////////////////////////////////////////
+export const changePuzzle = (puzzle, id) => (dispatch)=> {
+
+const test = puzzle.map((row)=> row.map((cel)=> {if(cel.id===id){return {id:id, color:"yellow"}}else{ return cel }} ) )
+
+console.log(test)
+dispatch(makePuzzle( test) )
+}
 
 

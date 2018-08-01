@@ -6,8 +6,8 @@ import './Piece.css'
 class Piece extends Component {
 render() {
     return (
-    <div className="Piece">
-          {this.props.id}  
+    <div className={`Piece ${this.props.color}`}> 
+          {this.props.id} 
     </div>
     )
   }

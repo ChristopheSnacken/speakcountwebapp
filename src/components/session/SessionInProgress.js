@@ -25,7 +25,7 @@ class SessionInProgress extends Component {
         </div>
       }
      
-      <Timer />
+      {/* <Timer /> */}
 
        <button className="submit" onClick={this.startClick}>
         Stop session
