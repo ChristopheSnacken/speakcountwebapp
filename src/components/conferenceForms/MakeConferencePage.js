@@ -32,7 +32,7 @@ class MakeConferencePage extends Component {
        }
      
         this.props.addSession(newData)
-        this.setState({redirect:true})
+        setTimeout(()=>this.setState({redirect:true}),400)
     }
 
   }

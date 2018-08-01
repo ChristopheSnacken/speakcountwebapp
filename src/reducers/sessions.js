@@ -12,14 +12,19 @@ export default (state = {}, {type, payload}) => {
         //   ...payload
         // }
         case UPDATE_SESSION:
-        return {
-          ...payload
-        }
+          if(payload[0]){ return payload} else {
+            return {
+              0:payload
+            }
+          }
+        
         
         case SET_SESSION:
-        return{
-            ...payload
-        }
+          if(payload[0]){ return payload} else {
+            return {
+              0:payload
+            }
+          }
         case ALL_SESSIONS:
         return {...payload.filter((session)=>session.status==='created')}
         case STARTED_SESSIONS:

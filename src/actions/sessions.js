@@ -86,6 +86,6 @@ export const createSession = (data) => (dispatch) => {
   request
     .post(`${baseUrl}/sessions`)
     .send({topic ,startTime, stimatedTime, numberOfParticipants})
-    .then(result => dispatch(addSession(...result.body) ))
+    .then(result => dispatch(addSession(result.body) ))
     .catch(err => console.error(err))
 }

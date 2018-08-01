@@ -26,7 +26,7 @@ import { Link } from 'react-router-dom'
            <div >
              <div className="logos" id="logos"> Started Sessions</div>
 
-             {this.props.sessions.map(session=> <SessionItem {...session} />)}
+             {this.props.sessions.map(session=> <SessionItem session={session} />)}
 
 
             </div>
