@@ -27,7 +27,7 @@ import archived from '../../images/icon-archive.png';
            <div >
              <div className="logos1" id="logos"><img className='archived' src={archived} alt="archived"/> Archived sessions</div>
 
-             {this.props.sessions.map(session=> <SessionItem  {...session} />)}
+             {this.props.sessions.map(session=> <SessionItem  session={session} />)}
 
 
             </div>

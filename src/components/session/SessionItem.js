@@ -10,28 +10,29 @@ import dateFormat from 'dateformat'
 
 
     render() {
-      const date=new Date(this.props.start_time)
-
+      let date=new Date()
+      if(this.props.session.start_time){date=new Date(this.props.session.start_time)}
+      
       return(
          <div className="EventStyle" >
            <div className="event">
 
 
-         <h3>{this.props.description}</h3>
-         <div className="Date"> {dateFormat(date, "dddd d mmmm")}</div>
-         <div className="Topic">{this.props.topic}</div>
-         <div className="Time"> Starts at:  {dateFormat(date, "UTC:HH:MM")}</div>
+         <h3>{this.props.session.description}</h3>
+         { date && <div className="Date"> {dateFormat(date, "dddd d mmmm")}</div> }
+         <div className="Topic">{this.props.session.topic}</div>
+         { date && <div className="Time"> Starts at:  {dateFormat(date, "UTC:HH:MM")}</div>  }
        </div>
        <div className="open">
 
-         <Link to={"/sessions/"+ this.props.id}><button type="submit" className="submit1">Open</button></Link>
+         <Link to={"/sessions/"+ this.props.session.id}><button type="submit" className="submit1">Open</button></Link>
 
        </div>
 
 
 
 
-         </div>
+        </div>
          )
        }
   }
