@@ -17,9 +17,9 @@ class SessionInProgress extends Component {
     return (<div className="code" >
 
       {
-        this.props.session && <div className= "code1"> {this.props.session.topic} discussion  <br />
+        this.props.session && <div className= "code1"><div> {this.props.session.topic} discussion  
         
-        {this.props.session.pieces_to_complete}
+        {this.props.session.pieces_to_complete}</div>
         <Puzzle />
         
         </div>

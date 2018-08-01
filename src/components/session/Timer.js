@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import './Session.css'
 
 
-class Session extends Component {
+class Timer extends Component {
 state={count:0}
 
 componentWillMount () { 
@@ -12,7 +12,7 @@ componentWillMount () {
 
 componentDidMount () {
     let counter = setInterval(() => {   
-        if(this.state.count===0){clearInterval(counter); console.log('finished')}
+        if(this.state.count===0){clearInterval(counter); console.log('Running late')}
         this.setState((previousState) => {
               return {count: previousState.count - 1};
           });
@@ -27,4 +27,4 @@ render() {
   }
 }
 
-export default connect() (Session)
+export default connect() (Timer)

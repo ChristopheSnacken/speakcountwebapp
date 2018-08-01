@@ -1,8 +1,8 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import {newPuzzle} from '../../actions/puzzle'
-
-//import Pieces from './Pieces'
+import './Puzzle.css'
+import Piece from './Piece'
 
 class Puzzle extends Component {
     componentDidMount(){
@@ -15,7 +15,7 @@ class Puzzle extends Component {
 
     <div className="Puzzle">
 
-    {this.props.puzzle&&<div>{this.props.puzzle.map((color)=><div>{color}</div>)}
+    {this.props.puzzle&&<div>{this.props.puzzle.map((row)=><div className="row">{row.map((color)=><Piece {...color} />)} </div>)}
      </div>
      }
     </div> 
