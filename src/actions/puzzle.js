@@ -37,21 +37,39 @@ const numberChecker = (fullNumber, divider)=>{
   const arrayMaker = (number)=>{
     let Narray=[]
     let i = 0
-    for (i=0; i<=number; i++){
+    for (i=0; i<=number-1; i++){
       Narray.push(i)
     }
     return Narray
   }
   
+  function shuffle(a) {
+    let j, x, i;
+    for (i = a.length ; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+const gettingValue = (A)=>{
+  const number = A.slice()
+
+  return number
+}
+
   export const newPuzzle=(size) => (dispatch)=> {
     const width=fullChecker(size)
     const length = size/width
-    console.log("width", width, length)
-   const create = (amount) => new Array(amount).fill('white');
-   const matrix = (rows, cols) => create(cols).map((o, i) => create(rows))
- 
-   dispatch(makePuzzle( matrix(width,length)) )
+    const fullArray = arrayMaker(size)
+    const shuffleArray = shuffle(fullArray)
+    console.log("shuffle", fullArray)
+  //  const create = (amount) => new Array(amount).fill({id:shuffleArray.slice(1), color:'white'});
+  //  const matrix = (rows, cols) => create(cols).map((o, i) => create(rows))
+  let arr = Array(length).fill("0").map((x) => Array(width).fill({color:"white"}))
+   dispatch(makePuzzle( arr) )
 
- return matrix(width,length);
+ //return matrix(width,length);
 }
 

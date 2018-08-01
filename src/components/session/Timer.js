@@ -7,7 +7,7 @@ class Timer extends Component {
 state={count:0}
 
 componentWillMount () { 
-    this.setState({count:this.props.time})
+    this.setState({count:this.props.session.stimated_time})
 }
 
 componentDidMount () {
@@ -27,4 +27,8 @@ render() {
   }
 }
 
-export default connect() (Timer)
+const mapStateToProps = function(state) {
+    return {session: state.sessions[0]}
+  }
+
+export default connect(mapStateToProps) (Timer)

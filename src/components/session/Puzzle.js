@@ -6,7 +6,7 @@ import Piece from './Piece'
 
 class Puzzle extends Component {
     componentDidMount(){
-       const PuzzlePieces=this.props.session.pieces_to_complete
+       const PuzzlePieces=this.props.session.number_of_pieces + this.props.session.quality_pieces 
        console.log(PuzzlePieces)
        this.props.newPuzzle(PuzzlePieces)
     }
