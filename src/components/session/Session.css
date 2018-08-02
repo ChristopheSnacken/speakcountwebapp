@@ -13,9 +13,10 @@
 .participants {
   margin-bottom: 50px;
 }
-/* .code1 {
+.code1 {
   display: flex
-} */
+}
+
 .codeTitle {
 
   margin: auto;
@@ -26,4 +27,7 @@
   font-size: 20pt;
   text-align: center;
   /* margin-bottom: 20ox; */
+}
+.timer3 {
+  text-align: center;
 }

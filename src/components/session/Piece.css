@@ -1,16 +1,16 @@
 .Piece{
     width:70px;
     height:70px;
-    margin:1px;
+    /* margin:1px; */
 }
 
 .white{
-    background-color: #3A7DC7;
+    background-color: #777777;
 
 }
 
 .yellow{
-    background-color: rgb(255, 255, 0);
+    background-color: #FFD02B;
 }
 
 

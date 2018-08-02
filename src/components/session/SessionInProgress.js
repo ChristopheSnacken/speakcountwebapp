@@ -17,10 +17,10 @@ class SessionInProgress extends Component {
     return (<div className="code" >
 
       {
-        this.props.session && <div className= "code1"><div className="TopicPuzzle"> {this.props.session.topic}  
+        this.props.session && <div className= "code2"><div className="TopicPuzzle"> {this.props.session.topic}
 
         </div>
-        <Puzzle />
+        <Puzzle className="PuzzleStyle"/>
 
         </div>
       }

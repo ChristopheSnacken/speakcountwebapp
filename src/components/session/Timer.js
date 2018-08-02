@@ -6,27 +6,27 @@ import { Line } from 'rc-progress';
 class Timer extends Component {
 state={count:0}
 
-componentWillMount () { 
+componentWillMount () {
     this.setState({count:this.props.session.stimated_time})
 }
 
 componentDidMount () {
-    let counter = setInterval(() => {   
+    let counter = setInterval(() => {
         if(this.state.count===0){clearInterval(counter); console.log('Running late')}
         this.setState((previousState) => {
               return {count: previousState.count - 1};
           });
     },1000)
-} 
+}
 render() {
-    let time = Math.floor((this.state.count/ this.props.session.stimated_time ) * 100).toString() 
+    let time = Math.floor((this.state.count/ this.props.session.stimated_time ) * 100).toString()
     return (
-    <div className="Timer">
+    <div className="timer3">
        {/* {this.state.count} */}
-       <Line percent={time} strokeColor="#FFD02B" style={{width:500}} />
-        <p>{this.props.session.stimated_time/ 60} minute session</p>
+       <Line percent={time} trailColor="#777777" strokeColor="#FFD02B" style={{width:500}} />
+        <p>{Math.floor(this.props.session.stimated_time/ 60)} minute session</p>
     </div>
-    
+
     )
   }
 }
