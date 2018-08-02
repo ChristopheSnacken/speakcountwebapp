@@ -5,7 +5,7 @@ import './Puzzle.css'
 import Piece from './Piece'
 
 class Puzzle extends Component {
- 
+ //counter starts at minus 1 so that when the puzzle gets formed with start the first div doesn't get triggered. Test sessions that are already started will need to press the button once but that is something that doesnt happen in production
     componentDidMount(){
        const PuzzlePieces=this.props.session.number_of_pieces + this.props.session.quality_pieces 
        this.props.newPuzzle(PuzzlePieces)

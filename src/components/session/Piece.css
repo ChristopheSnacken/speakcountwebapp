@@ -1,11 +1,12 @@
 .Piece{
     width:70px;
     height:70px; 
-    border: 1px solid white; 
+   
+    margin:1px
 }
 
 .white{
-    background-color: rgb(225, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 
 .yellow{
@@ -27,13 +28,13 @@
   }
   
   .r{
-    width: 2em;
-  height: 2em;
-  top: 2em;
-  left: 5.5em;
-  -webkit-border-radius: 4em;
+    width: 45px;
+  height: 45px;
+  top: 10px;
+  left: 40px;
   -moz-border-radius: 4em;
   border-radius: 4em;
+  position: relative;
 
   }
   
@@ -59,8 +60,3 @@
    
   }
 
-  .Piece{
-    width:70px;
-    height:70px;
-    margin:10px;   
-}
