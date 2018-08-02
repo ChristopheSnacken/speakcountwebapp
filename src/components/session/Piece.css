@@ -1,12 +1,12 @@
 .Piece{
     width:70px;
-    height:70px; 
-   
-    margin:1px
+    height:70px;
+    margin:1px;
 }
 
 .white{
-    background-color: rgb(255, 255, 255);
+    background-color: #3A7DC7;
+
 }
 
 .yellow{
@@ -15,7 +15,7 @@
 
 
 
-  
+
   .t{
    width: 20px;
     height: 20px;
@@ -24,9 +24,10 @@
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
-    
+
+
   }
-  
+
   .r{
     width: 45px;
   height: 45px;
@@ -37,8 +38,8 @@
   position: relative;
 
   }
-  
-  .b{ 
+
+  .b{
    width: 1.8em;
     height: 1.8em;
     top: 4.5em;
@@ -46,10 +47,12 @@
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
-    
+
+
+
   }
-  
-  .l{ 
+
+  .l{
    width: 1.8em;
     height: 1.8em;
     top: 2.2em;
@@ -57,6 +60,6 @@
     -webkit-border-radius: 4em;
     -moz-border-radius: 4em;
     border-radius: 4em;
-   
-  }
 
+
+  }

@@ -13,24 +13,24 @@ class SessionInProgress extends Component {
   }
 
   render() {
-    
+
     return (<div className="code" >
 
       {
-        this.props.session && <div className= "code1"><div> {this.props.session.topic} discussion  
-        
-        {this.props.session.pieces_to_complete}</div>
+        this.props.session && <div className= "code1"><div className="TopicPuzzle"> {this.props.session.topic}  
+
+        </div>
         <Puzzle />
-        
+
         </div>
       }
-     
-      <Timer /> 
+
+      <Timer />
 
        <button className="submit" onClick={this.startClick}>
         Stop session
       </button>
-   
+
     </div>)
   }
 }
@@ -47,4 +47,3 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionInProgress)
-
