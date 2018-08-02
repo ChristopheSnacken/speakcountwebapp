@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import './Session.css'
-
+import { Line } from 'rc-progress';
 
 class Timer extends Component {
 state={count:0}
@@ -19,10 +19,14 @@ componentDidMount () {
     },1000)
 } 
 render() {
+    let time = Math.floor((this.state.count/ this.props.session.stimated_time ) * 100).toString() 
     return (
     <div className="Timer">
-       {this.state.count}
+       {/* {this.state.count} */}
+       <Line percent={time} strokeColor="#FFD02B" style={{width:500}} />
+        <p>{this.props.session.stimated_time/ 60} minute session</p>
     </div>
+    
     )
   }
 }
