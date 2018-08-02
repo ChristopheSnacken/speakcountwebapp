@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import {newPuzzle, changePuzzle} from '../../actions/puzzle'
+import {newPuzzle, getPiece} from '../../actions/puzzle'
 import './Puzzle.css'
 import Piece from './Piece'
 
@@ -21,7 +21,7 @@ class Puzzle extends Component {
       }
     }
     puzzleClick = () => {   
-      this.props.changePuzzle(this.props.puzzle, this.state.count)  
+      this.props.changePuzzle(this.state.count)  
       this.setState((previousState) => {
         return {count: previousState.count + 1};
     })
@@ -55,8 +55,8 @@ const mapStateToProps = function (state) {
       newPuzzle: (x) => {
         dispatch(newPuzzle(x));
       },
-      changePuzzle: (x,y) => {
-        dispatch(changePuzzle(x,y));
+      changePuzzle: (y) => {
+        dispatch(getPiece(y));
       }
     };
   };

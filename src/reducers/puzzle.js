@@ -5,7 +5,7 @@ export default (state = [], {type, payload}) => {
       case MAKE_PUZZLE:
         return [...payload]
       case GET_PIECE:
-        return [...state, ...payload]
+        return state.map((row)=> row.map((cel)=> {if(cel.id===payload){return {id:payload, color:"yellow"}}else{ return cel }} ) )
       default:
         return state
     }
