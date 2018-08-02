@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import SessionJoining from './SessionJoining'
 import SessionInProgress from './SessionInProgress'
 import {startAndStopMessage, fetchSession} from '../../actions/sessions'
+import Report from './Report'
 
 class Session extends Component {
   componentDidMount() {
@@ -17,7 +18,7 @@ class Session extends Component {
       { this.props.session &&
       <div> {this.props.session.status==='created' && <div> <SessionJoining />  </div> }
       <div> {this.props.session.status==='started' && <div> <SessionInProgress />  </div> }</div>
-      <div> {this.props.session.status==='finished' && <div> this session is finished  </div> }</div>
+      <div> {this.props.session.status==='finished' && <div> <Report />  </div> }</div>
       </div>
     }
 

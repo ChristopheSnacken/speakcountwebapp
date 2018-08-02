@@ -9,7 +9,16 @@ class Puzzle extends Component {
     componentDidMount(){
        const PuzzlePieces=this.props.session.number_of_pieces + this.props.session.quality_pieces 
        this.props.newPuzzle(PuzzlePieces)
-       this.setState({count:0})
+       this.setState({count:-1})
+    }
+
+    componentDidUpdate(prevProps){
+      if (prevProps.session.pieces_to_complete !== this.props.session.pieces_to_complete) {
+        this.props.changePuzzle(this.props.puzzle, this.state.count)  
+        this.setState((previousState) => {
+        return {count: previousState.count + 1};
+    })
+      }
     }
     puzzleClick = () => {   
       this.props.changePuzzle(this.props.puzzle, this.state.count)  
@@ -24,7 +33,7 @@ class Puzzle extends Component {
     <div className="Puzzle">
 
 
-    {this.props.puzzle&&<div>{this.props.puzzle.map((row,w)=><div className="row">{row.map((color, i)=><Piece {...color} w={w} i={i}/>)} </div>)}
+    {this.props.puzzle&&<div>{this.props.puzzle.map((row,w,a)=><div className="row">{row.map((color, i,x)=><Piece {...color} w={w} i={i} a={a} x={x}/>)} </div>)}
      </div>
      }
     </div> 
